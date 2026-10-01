@@ -1,6 +1,6 @@
 # EPI code availability
 
-This package contains simulation code, pretrained base weights and experimental deployment reliance. The digital network generates an SLM1 phase pattern from a scattered image, and the shared SLM2 phase produces the optical reconstruction.
+This package contains simulation code, pretrained base weights and experimental deployment reliance. The digital network generates an conditioned wavefront shaper phase pattern from a scattered image, and the shared optical diffractive reconstructor phase produces the optical reconstruction.
 
 ## Files
 
