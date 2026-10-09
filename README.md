@@ -22,7 +22,7 @@ Keep the Python files in the same directory with their original names.
 
 ## Base weights
 
-The supplied weights provide a starting point for fine-tuning on a new dataset. They were trained on 11,760 condition–GT pairs: 11,520 static biological pairs and 240 moving biological pairs. Latent construction used 3,120 unique GT file paths. All these data participated in training; scores on the same images measure training fit.
+The supplied weights provide a starting point for fine-tuning on sim, 2D and 3D dataset. 
 
 Latent construction completed 80 epochs, with cumulative epoch 79 selected. Joint training completed 22 full epochs and selected epoch 22. These weights have not undergone subsequent fine-tuning or physical deployment.
 
