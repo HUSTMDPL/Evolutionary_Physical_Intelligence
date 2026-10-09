@@ -24,8 +24,6 @@ Keep the Python files in the same directory with their original names.
 
 The supplied weights provide a starting point for fine-tuning on sim, 2D and 3D dataset. 
 
-Latent construction completed 80 epochs, with cumulative epoch 79 selected. Joint training completed 22 full epochs and selected epoch 22. These weights have not undergone subsequent fine-tuning or physical deployment.
-
 The demo uses K=8. Other budgets in the manuscript's broader EPI framework require changes to the sampler and configuration; the supplied entries do not expose a K switch.
 
 ## Environment and data
@@ -72,7 +70,7 @@ python "latent space construction.py" --dataset "TRAINING_DATASET" --output "RUN
 python "pre-train.py" --dataset "TRAINING_DATASET" --latent-checkpoint "LATENT_RUN/latent_space_v13.pt" --output "RUNS"
 ```
 
-The default durations are 24 latent epochs and 4 joint epochs; set `--epochs` for a longer run. Joint generation starts from independent Gaussian noise. After eight denoising steps, D converts the final latent into SLM1 phase, and the two-SLM simulator forms the image. R is used for latent construction only.
+Set `--epochs` for a longer run. Joint generation starts from independent Gaussian noise. After eight denoising steps, D converts the final latent into SLM1 phase, and the two-SLM simulator forms the image. R is used for latent construction only.
 
 The image loss combines Charbonnier error and `0.1 × (1 − MS-SSIM)`. Joint training adds noise-prediction loss and phase regularization with weight `1e-4`.
 
